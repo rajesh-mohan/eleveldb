@@ -32,7 +32,7 @@ random_bin(_Id, Size) ->
 almost_completely_sequential(_Id, MaxSuffix, PercentAlmostSeq) ->
     fun() ->
             {A, B, C} = os:timestamp(),
-            TimeT = (A*1000000) + B,
+            TimeT = (A*1000) + B,
             End = case rand:uniform(100) of
                       N when N < PercentAlmostSeq ->
                           C;                    % microseconds
